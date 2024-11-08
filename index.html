@@ -1,188 +1,157 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elon Musk & SpaceX</title>
-    <!-- Favicon -->
-    <link rel="icon" href="x.png" type="image/png">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elon Musk & SpaceX Fan Site</title>
+  <link rel="icon" href="x.png">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
 
-    <style>
-      /* General Style */
-      html {
-        font-family: 'Arial', sans-serif;
-        background-color: #0b0f2f;
-        color: white;
-      }
+    header {
+      background-color: #0d1f2d;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
 
-      body {
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: 20px;
-        background-image: url('https://source.unsplash.com/1600x900/?space,rocket');
-        background-size: cover;
-        background-position: center;
-        color: white;
-      }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
 
-      header, footer {
-        background: rgba(0, 0, 0, 0.7);
-        padding: 20px;
-        border: 2px solid #ff4d4d;
-        text-align: center;
-      }
+    main {
+      padding: 20px;
+    }
 
-      header {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0d1f2d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    form button:hover {
+      background-color: #3c4d69;
+    }
+
+    .elon-image {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #0d1f2d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #f4f4f9;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #f7c731;
+    }
+
+    /* Make the form responsive */
+    @media screen and (max-width: 768px) {
+      header h1 {
         font-size: 2rem;
       }
 
-      footer {
+      form {
+        padding: 15px;
+      }
+
+      form input, form textarea, form button {
+        padding: 10px;
         font-size: 1rem;
       }
+    }
 
-      h1 {
-        font-size: 3rem;
-        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
-      }
+  </style>
+</head>
+<body>
 
-      .content {
-        background: rgba(0, 0, 0, 0.6);
-        border-radius: 10px;
-        padding: 20px;
-        margin-top: 30px;
-      }
+<header>
+  <h1>Welcome to the World of Elon Musk & SpaceX</h1>
+</header>
 
-      .content h2 {
-        color: #ff4d4d;
-      }
+<main>
+  <div class="container">
+    <p class="personal-greeting">Greetings, space enthusiast! You've just landed in the world of Elon Musk, where humanity's future in space is being written. We are thrilled to have you here, let's explore together!</p>
+    
+    <h2>Send Your Message to Elon Musk</h2>
+    <form id="contact-form">
+      <label for="entername">Name:</label>
+      <input id="entername" type="text" placeholder="Enter your name" required>
+      
+      <label for="enteremail">Email:</label>
+      <input id="enteremail" type="email" placeholder="Enter your email" required>
+      
+      <label for="enterphone">Phone Number:</label>
+      <input id="enterphone" type="tel" placeholder="Enter your phone number" required>
 
-      .form-container {
-        margin-top: 20px;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-      }
+      <label for="entermessage">Message:</label>
+      <textarea id="entermessage" rows="4" placeholder="Write your message to Elon Musk" required></textarea>
 
-      .form-container input[type="text"], 
-      .form-container input[type="email"] {
-        width: 80%;
-        padding: 10px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-      }
+      <button type="submit" id="submitname">Send Message</button>
+      <button type="button" id="forgetname">Forget Me</button>
+    </form>
 
-      .form-container input[type="submit"], 
-      .form-container input[type="reset"] {
-        width: 80%;
-        padding: 10px;
-        margin: 10px 0;
-        background-color: #ff4d4d;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        font-size: 1.1rem;
-        cursor: pointer;
-      }
+    <img src="elon-musk.jpg" alt="Elon Musk" class="elon-image">
 
-      .form-container input[type="submit"]:hover,
-      .form-container input[type="reset"]:hover {
-        background-color: #ff1a1a;
-      }
+  </div>
+</main>
 
-      /* Personal Greeting */
-      .personal-greeting {
-        font-weight: bold;
-        text-align: center;
-        margin-top: 20px;
-        font-size: 1.5rem;
-      }
+<footer>
+  <p>&copy; 2024 SpaceX Fan Site</p>
+  <p>Location: SpaceX Headquarters, Hawthorne, California, USA</p>
+  <p>
+    <a href="#contact-form">Contact Form</a>
+    <a href="#about-elon">About Elon Musk</a>
+    <a href="#spacex">SpaceX Overview</a>
+  </p>
+</footer>
 
-      .personal-greeting span {
-        color: #ff4d4d;
-      }
+<script src="index.js" defer></script>
 
-      .content img {
-        width: 50%;
-        border-radius: 10px;
-        margin: 20px 0;
-      }
-
-      /* Responsiveness */
-      @media screen and (max-width: 768px) {
-        body {
-          padding: 10px;
-        }
-
-        .form-container input[type="text"], 
-        .form-container input[type="email"],
-        .form-container input[type="submit"], 
-        .form-container input[type="reset"] {
-          width: 100%;
-        }
-
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        .content img {
-          width: 100%;
-        }
-      }
-    </style>
-    <script src="index.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <h1>Elon Musk & SpaceX</h1>
-    </header>
-
-    <main>
-
-      <div class="content">
-        <h2>About Elon Musk</h2>
-        <p><strong>Childhood of Elon Musk:</strong> Born in Pretoria, South Africa, Elon Musk’s childhood was marked by a natural curiosity and a passion for learning. His parents divorced when he was young, and he was often teased in school due to his introverted nature. He spent much of his time reading books on topics ranging from science fiction to technology, laying the foundation for his future ventures.</p>
-
-        <p><strong>Dedication to Success:</strong> Elon’s unwavering dedication to achieving his goals has been a defining characteristic throughout his life. He moved to Canada at age 17, attended Queen's University, and later transferred to the University of Pennsylvania in the U.S. Elon founded several companies, including PayPal and Zip2, demonstrating his relentless drive to innovate and revolutionize industries.</p>
-
-        <p><strong>Elon Musk’s Achievements:</strong> From founding Tesla Motors and bringing electric cars to the forefront of the automobile industry, to creating the solar power company SolarCity, Musk’s achievements are groundbreaking. He has pioneered efforts to advance humanity’s space exploration capabilities and is the driving force behind numerous successful ventures, including The Boring Company and Neuralink.</p>
-
-        <p><strong>How He Founded SpaceX:</strong> In 2002, Elon Musk founded SpaceX with the ambitious goal of reducing space transportation costs and making Mars colonization a reality. His vision of creating reusable rockets to lower the cost of space exploration was initially met with skepticism, but Musk’s unrelenting work ethic and groundbreaking innovations in rocket technology made SpaceX the industry leader in space transportation.</p>
-
-        <h2>About SpaceX</h2>
-        <p><strong>SpaceX's Mission:</strong> SpaceX’s ultimate mission is to make life multi-planetary, with the goal of establishing human colonies on Mars. The company has made history by designing and launching the world’s first privately funded spacecraft to reach orbit, delivering cargo to the International Space Station (ISS), and even sending astronauts into space aboard its Dragon spacecraft.</p>
-
-        <p><strong>Future Plans of Elon Musk:</strong> Elon Musk’s future plans include building the Starship, which will enable deep space exploration and the colonization of Mars. SpaceX aims to make space travel more affordable, with plans to send regular missions to the Moon, Mars, and beyond. Elon is also working to reduce humanity’s reliance on fossil fuels by transitioning to renewable energy solutions like solar power, as well as revolutionizing transportation with the Hyperloop.</p>
-
-        <p><strong>SpaceX’s Contribution to Mars Colonization:</strong> SpaceX has made significant contributions toward the Mars Colonization project. The company’s next-generation Starship is designed to carry humans to Mars and other destinations in our solar system. Through innovations in reusable rocket technology and the development of systems that can support human life in space, SpaceX is poised to play a key role in humanity’s journey to become a multi-planetary species.</p>
-
-        <img src="elon-musk.jpeg" alt="Elon Musk">
-      </div>
-
-      <div class="form-container">
-        <form>
-          <div class="remember">
-            <label for="entername">Enter your name:</label>
-            <input id="entername" type="text" placeholder="Your name" required>
-            <label for="enteremail">Enter your email:</label>
-            <input id="enteremail" type="email" placeholder="Your email" required>
-            <input id="submitname" type="submit" value="Submit">
-          </div>
-          <div class="forget">
-            <label for="forgetname">Want me to forget you?</label>
-            <input id="forgetname" type="reset" value="Forget Me">
-          </div>
-        </form>
-      </div>
-
-      <p class="personal-greeting">Greetings, <span id="greeting-name">space enthusiast</span>! Welcome to the world of Elon Musk, where the future is being written in the stars. Let’s dive into the visionary mind that’s reshaping humanity’s destiny.</p>
-
-    </main>
-
-    <footer>
-      <p>&copy; 2024 SpaceX Enthusiasts. All rights reserved. Together, we reach for the stars!</p>
-    </footer>
-  </body>
+</body>
 </html>
