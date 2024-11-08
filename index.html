@@ -3,74 +3,172 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal greeting</title>
+    <title>Elon Musk & SpaceX</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/SpaceX_Logo.svg/2560px-SpaceX_Logo.svg.png" type="image/png">
+
     <style>
+      /* General Style */
       html {
-        font-family: sans-serif;
+        font-family: 'Arial', sans-serif;
+        background-color: #0b0f2f;
+        color: white;
       }
 
       body {
         margin: 0 auto;
-        max-width: 1024px;
-      }
-
-      main {
+        max-width: 1200px;
         padding: 20px;
+        background-image: url('https://source.unsplash.com/1600x900/?space,rocket');
+        background-size: cover;
+        background-position: center;
+        color: white;
       }
 
       header, footer {
-        background: cyan;
+        background: rgba(0, 0, 0, 0.7);
         padding: 20px;
-        border: 1px solid black;
+        border: 2px solid #ff4d4d;
+        text-align: center;
       }
 
       header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        font-size: 2rem;
       }
 
-      form {
-        font-size: 0.8rem;
+      footer {
+        font-size: 1rem;
       }
 
+      h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+      }
+
+      .content {
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 30px;
+      }
+
+      .content h2 {
+        color: #ff4d4d;
+      }
+
+      .form-container {
+        margin-top: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .form-container input[type="text"], 
+      .form-container input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .form-container input[type="submit"], 
+      .form-container input[type="reset"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #ff4d4d;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      .form-container input[type="submit"]:hover,
+      .form-container input[type="reset"]:hover {
+        background-color: #ff1a1a;
+      }
+
+      /* Personal Greeting */
       .personal-greeting {
         font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 1.5rem;
+      }
+
+      .personal-greeting span {
+        color: #ff4d4d;
+      }
+
+      .content img {
+        width: 50%;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      /* Responsiveness */
+      @media screen and (max-width: 768px) {
+        body {
+          padding: 10px;
+        }
+
+        .form-container input[type="text"], 
+        .form-container input[type="email"],
+        .form-container input[type="submit"], 
+        .form-container input[type="reset"] {
+          width: 100%;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .content img {
+          width: 100%;
+        }
       }
     </style>
     <script src="index.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Our website</h1>
-
-      <form>
-        <div class="remember">
-          <label for="entername">Enter your name:</label>
-          <input id="entername" type="text" required>
-          <input id="submitname" type="submit" value="Say hello">
-        </div>
-        <div class="forget">
-          <label for="forgetname">Want me to forget you?</label>
-          <input id="forgetname" type="reset" value="Forget">
-        </div>
-      </form>
+      <h1>Elon Musk & SpaceX</h1>
     </header>
 
     <main>
 
-      <p class="personal-greeting">Welcome to our website.</p>
+      <div class="content">
+        <h2>About Elon Musk & SpaceX</h2>
+        <p>Elon Musk, a visionary entrepreneur, founded SpaceX in 2002 with the goal of reducing space transportation costs and enabling the colonization of Mars. Under his leadership, SpaceX has successfully developed the Falcon and Starship rockets, as well as the Dragon spacecraft. SpaceX became the first private company to send astronauts to the International Space Station.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Elon_Musk_Rococo_1.jpg" alt="Elon Musk">
+      </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada, metus ut mollis volutpat, felis est rhoncus turpis, in blandit est risus malesuada dui. Phasellus tempus elit at purus vestibulum suscipit. Donec quis est nec dui pretium venenatis sit amet eu nulla. Donec finibus, ipsum non semper dignissim, massa magna sagittis est, vitae vehicula nunc magna vitae diam. Integer ultrices mauris aliquet arcu tempor, at mattis justo sagittis. Nunc ut nulla et erat viverra tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer vitae bibendum justo. Vestibulum porta velit sit amet libero accumsan fermentum.</p>
+      <div class="form-container">
+        <form>
+          <div class="remember">
+            <label for="entername">Enter your name:</label>
+            <input id="entername" type="text" placeholder="Your name" required>
+            <label for="enteremail">Enter your email:</label>
+            <input id="enteremail" type="email" placeholder="Your email" required>
+            <input id="submitname" type="submit" value="Submit">
+          </div>
+          <div class="forget">
+            <label for="forgetname">Want me to forget you?</label>
+            <input id="forgetname" type="reset" value="Forget Me">
+          </div>
+        </form>
+      </div>
 
-      <p>Ut id mauris urna. In sed porttitor lectus. Suspendisse dignissim dolor id lectus pellentesque, eu bibendum lectus malesuada. Phasellus volutpat sollicitudin suscipit. Donec id libero nisl. Praesent gravida purus vel euismod facilisis. Maecenas sit amet velit non lacus aliquam dictum vitae eu augue. Donec euismod enim elementum elit laoreet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-      <p>Integer vulputate, libero sed vulputate eleifend, magna libero malesuada ligula, sit amet tincidunt dui mi vitae mauris. Aliquam aliquam turpis mauris, in sagittis orci rutrum efficitur. Sed vel purus fringilla, pretium sapien sed, accumsan erat. Morbi scelerisque tempor purus in faucibus. Nunc fringilla nulla ut aliquam posuere. Vivamus id lectus eleifend, bibendum urna non, ornare nibh. Fusce bibendum vulputate mollis.</p>
+      <p class="personal-greeting">Welcome to our website, <span id="greeting-name">guest</span>!</p>
 
     </main>
 
     <footer>
-      <p>Copyright nobody. Use the code as you like.</p>
+      <p>&copy; 2024 SpaceX Enthusiasts. All rights reserved.</p>
     </footer>
   </body>
 </html>
